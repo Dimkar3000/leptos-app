@@ -1,3 +1,6 @@
 /target
 tailwind.config.js
 dist
+node_modules
+output.css
+package-lock.json
