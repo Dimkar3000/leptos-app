@@ -13,17 +13,10 @@ pub fn form(cx: Scope) -> impl IntoView {
     let (read_name, set_name) = create_signal(cx, "managed name".to_string());
     let input_element: NodeRef<Input> = create_node_ref(cx);
     let on_submit = move |ev: SubmitEvent| {
-        // stop the page from reloading!
         ev.prevent_default();
 
-        // here, we'll extract the value from the input
         let value = input_element()
-            // event handlers can only fire after the view
-            // is mounted to the DOM, so the `NodeRef` will be `Some`
             .expect("<input> to exist")
-            // `NodeRef` implements `Deref` for the DOM element type
-            // this means we can call`HtmlInputElement::value()`
-            // to get the current value of the input
             .value();
         set_name(value);
     };
