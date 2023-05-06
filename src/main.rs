@@ -1,13 +1,15 @@
 mod counter;
-mod list;
-mod slider;
 mod form;
+mod list;
+mod numeric_input;
+mod slider;
 mod switch;
 
 use crate::counter::*;
-use crate::list::*;
-use crate::slider::*;
 use crate::form::*;
+use crate::list::*;
+use crate::numeric_input::*;
+use crate::slider::*;
 use crate::switch::*;
 
 use leptos::*;
@@ -20,6 +22,7 @@ fn app(cx: Scope) -> impl IntoView {
         <Counter/>
         <Slider/>
         <Switch/>
+        <NumericInput/>
         <Form/>
         <List/>
     </div>

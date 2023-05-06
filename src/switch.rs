@@ -1,7 +1,4 @@
-use leptos::{
-    ev::{Event, InputEvent},
-    *,
-};
+use leptos::*;
 
 const TITLE: &'static str = "The Switch";
 const DESCRIPTION: &'static str =
